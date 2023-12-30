@@ -1,5 +1,5 @@
-import os, PIL.Image, time
-intro = PIL.Image.open("intro.gif")
+import os, PIL.Image, time, random
+intro = PIL.Image.open("intros/"+random.choice(os.listdir("intros")))
 for i in range(intro.n_frames):
     intro.seek(i + int(os.system("clear"))*0)
     frame = intro.convert("RGB").resize((os.get_terminal_size().columns, os.get_terminal_size().lines-1), PIL.Image.NEAREST)
