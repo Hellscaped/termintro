@@ -1,3 +1,4 @@
+#/usr/bin/env python3
 import os, sys,time, json
 with open(sys.argv[1]) as f:
     intro = json.loads(f.read())

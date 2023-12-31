@@ -1,3 +1,4 @@
+#/usr/bin/env python3
 import os, PIL.Image, sys,json
 if not os.path.exists("intros"):
     os.mkdir("intros")
