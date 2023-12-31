@@ -8,3 +8,4 @@ make an issue if you want to contribute a cringe gaming intro gif
 Put the gif in the uncompiled/ directory
 
 ## How to remove randomization?
+when running intro.py supply the gif as an argument
