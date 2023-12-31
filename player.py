@@ -1,10 +1,7 @@
-import os, sys,time
-with open(sys.argv[1], "r") as f:
-    intro = f.read()
-    intro = intro.split("\033c")
+import os, sys,time, json
+with open(sys.argv[1]) as f:
+    intro = json.loads(f.read())
     f.close()
-for frame in intro:
-    print("\033c", end="")
-    print(frame, end="")
-    time.sleep(0.1)
-print("\033c", end="")
+for frame in intro["frames"]:
+    print(frame[0], end="")
+    time.sleep(frame[1])
