@@ -9,9 +9,9 @@ def compile(intro):
         # add clear
         introfile["frames"].append(["\033c",0])
         intro.seek(i)
-        frame = intro.convert("RGB").resize((os.get_terminal_size().columns, os.get_terminal_size().lines-1), PIL.Image.NEAREST)
+        frame = intro.convert("RGB").resize((os.get_terminal_size().columns, os.get_terminal_size().lines), PIL.Image.NEAREST)
         f = ""
-        for y in range(os.get_terminal_size().lines-1):
+        for y in range(os.get_terminal_size().lines):
             line = ""
             for x in range(os.get_terminal_size().columns):
                 r, g, b = frame.getpixel((x, y))
